@@ -68,7 +68,7 @@ def get_portfolio_data():
             'title': 'Développeur Full Stack',
             'description': 'Passionné par le développement web, les jeux vidéo et les nouvelles technologies. Spécialisé en Python, C++, Java et le développement avec Unreal Engine.',
             'email': 'andyrakotondradano@gmail.com',
-            'phone': '+1 59 372 6108',
+            'phone': '+1 579 372 6108',
             'location': 'Montréal, QC',
             'profile_image': get_media_url('profile.jpg', 'profile')
         },
@@ -79,6 +79,7 @@ def get_portfolio_data():
             {'name': 'C', 'level': 75},
             {'name': 'C++', 'level': 90},
             {'name': 'Unreal Engine', 'level': 85},
+            {'name': 'Unity Engine', 'level': 90},
             {'name': 'SQL', 'level': 70},
             {'name': 'Git', 'level': 90},
             {'name': 'Flask/Django', 'level': 80},
