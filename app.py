@@ -100,6 +100,22 @@ def get_portfolio_data():
                 'main_image': get_media_url('simulateur_1.jpg', 'projects'),
                 'github': 'https://github.com/andyrakoto/simulateur-conduite',
                 'demo': None
+            },
+            {
+                'id': 2,
+                'title': 'JeuAventure - Jeu d\'aventure 3D avec IA Unity',
+                'description': 'Jeu d\'aventure/plateforme 3D avec système de collection, sauvetage d\'amis et combat contre des ennemis intelligents. Mécaniques physiques réalistes, effets visuels avancés et IA basée sur NavMesh pour les comportements ennemis.',
+                'technologies': ['Unity 6.1', 'C#', 'Universal Render Pipeline', 'NavMesh AI', 'iTween', 'Post-Processing', 'Terrain Tools', 'Particle Systems'],
+                'images': [
+                    get_media_url('jeuaventure_1.jpg', 'projects'),
+                    get_media_url('jeuaventure_2.jpg', 'projects'),
+                ],
+                'videos': [
+                    get_media_url('jeuaventure_demo.mp4', 'videos')
+                ],
+                'main_image': get_media_url('jeuaventure_1.jpg', 'projects'),
+                'github': 'https://github.com/andyrakoto/jeu-aventure',
+                'demo': None
             }
         ],
         'experience': [
