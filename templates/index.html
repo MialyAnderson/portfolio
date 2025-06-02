@@ -189,7 +189,8 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 1rem;
+                padding: 0 0.5rem;
+                max-width: 100vw;
             }
         }
 
@@ -273,6 +274,7 @@
             word-wrap: break-word;
             overflow-wrap: break-word;
             hyphens: auto;
+            max-width: 100%;
         }
 
         .contact-info {
@@ -867,12 +869,16 @@
             }
 
             .about-info {
-                padding: 1.5rem;
-                margin: 0 1rem;
+                padding: 1rem;
+                margin: 0 0.5rem;
+                max-width: calc(100vw - 2rem);
+                box-sizing: border-box;
             }
 
             .about-text {
                 text-align: left;
+                overflow: hidden;
+                width: 100%;
             }
 
             .about-text p {
@@ -880,8 +886,10 @@
                 word-wrap: break-word;
                 overflow-wrap: break-word;
                 hyphens: auto;
-                font-size: 0.95rem;
-                line-height: 1.6;
+                font-size: 0.85rem;
+                line-height: 1.5;
+                margin-bottom: 1rem;
+                max-width: 100%;
             }
 
             .profile-photo {
@@ -948,7 +956,7 @@
             <h2 class="section-title">À propos de moi</h2>
             <div class="about-content">
                 <div class="about-image">
-                    <img src="{{ data.about.photo or 'static\media\profile\profile.jpg' }}" 
+                    <img src="{{ data.about.photo or '/static/images/profile.jpg' }}" 
                          alt="Photo de {{ data.about.name }}" 
                          class="profile-photo"
                          onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNTAiIHI9IjE1MCIgZmlsbD0iIzJkM2EzZSIvPjxjaXJjbGUgY3g9IjE1MCIgY3k9IjExMCIgcj0iNDAiIGZpbGw9IiNmZmYiLz48cGF0aCBkPSJNIDcwIDIyMCBRIDE1MCAyMDAsMjMwIDIyMCBMIDIzMCAzMDAgTCA3MCAzMDAgWiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=='; this.alt='Photo de profil par défaut';">
@@ -1070,6 +1078,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- Modal pour les médias -->
     <div id="media-modal" class="media-modal">
