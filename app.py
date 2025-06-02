@@ -117,6 +117,40 @@ def get_portfolio_data():
                 'main_image': get_media_url('jeuaventure_1.jpg', 'projects'),
                 'github': 'https://github.com/andyrakoto/jeu-aventure',
                 'demo': None
+            },
+            {
+                'id': 3,
+                'title': 'Aventure 3D - Jeu d\'exploration et collecte avec Unreal Engine',
+                'description': 'Jeu d\'aventure 3D développé entièrement avec le système Blueprint d\'Unreal Engine 5.5. Le joueur explore un monde ouvert en collectant des pièces, utilise un système de vol pour atteindre des zones élevées, et résout des énigmes avec un mécanisme clé-porte pour débloquer de nouvelles zones d\'exploration.',
+                'technologies': ['Unreal Engine 5.5', 'Blueprint Visual Scripting', 'Third Person Character', 'Enhanced Input System', 'Collision Detection', 'Level Design', 'Animation Blueprint', 'Particle Systems'],
+                'images': [
+                    get_media_url('aventure3d_1.jpg', 'projects'),
+                    get_media_url('aventure3d_2.jpg', 'projects'),
+                    get_media_url('aventure3d_3.jpg', 'projects'),
+                ],
+                'videos': [
+                    get_media_url('aventure3d_demo.mp4', 'videos')
+                ],
+                'main_image': get_media_url('aventure3d_1.jpg', 'projects'),
+                'github': 'https://github.com/andyrakoto/aventure3d-unreal',
+                'demo': None
+            },
+            {
+                'id': 4,
+                'title': 'Aventure Open World - Jeu de quêtes 3D Unity (En développement)',
+                'description': 'Jeu d\'aventure open world en développement sous Unity avec système de quêtes immersif. Actuellement implémenté : map complète et système de mouvement avancé du personnage avec physiques réalistes (marche, course, saut), animations fluides et effets visuels. Projet en cours de développement avec mécaniques de quêtes et interactions à venir.',
+                'technologies': ['Unity 6.1', 'C#', 'Rigidbody Physics', 'Animator Controller', 'Particle Systems', 'Audio System', 'Input System', 'LayerMask', 'Raycast Detection'],
+                'images': [
+                    get_media_url('openworld_1.jpg', 'projects'),
+                    get_media_url('openworld_2.jpg', 'projects'),
+                ],
+                'videos': [
+                    get_media_url('openworld_demo.mp4', 'videos')
+                ],
+                'main_image': get_media_url('openworld_1.jpg', 'projects'),
+                'github': 'https://github.com/andyrakoto/aventure-openworld',
+                'demo': None,
+                'status': 'En développement'
             }
         ],
         'experience': [
