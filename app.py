@@ -153,15 +153,6 @@ def get_portfolio_data():
                 'status': 'En développement'
             }
         ],
-        'experience': [
-            {
-                'title': 'Développeur Débutant',
-                'company': 'Farmshop Madagascar',
-                'period': '2022 - Janvier 2025',
-                'description': 'Développement d\'applications web pour la gestion des stocks et des commandes. Création d\'interfaces utilisateur intuitives et optimisation des performances.',
-                'technologies': ['Python', 'Django', 'PostgreSQL', 'HTML/CSS', 'JavaScript']
-            }
-        ]
     }
 
 @app.route('/')
