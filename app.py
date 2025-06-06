@@ -99,7 +99,7 @@ def get_portfolio_data():
                     get_media_url('simulateur_demo.mp4', 'videos')
                 ],
                 'main_image': get_media_url('simulateur_1.jpg', 'projects'),
-                'github': 'https://github.com/andyrakoto/simulateur-conduite',
+                'github': 'https://github.com/MialyAnderson/SimulateurVoiture.git',
                 'demo': None
             },
             {
@@ -115,7 +115,7 @@ def get_portfolio_data():
                     get_media_url('jeuaventure_demo.mp4', 'videos')
                 ],
                 'main_image': get_media_url('jeuaventure_1.jpg', 'projects'),
-                'github': 'https://github.com/andyrakoto/jeu-aventure',
+                'github': 'https://github.com/MialyAnderson/JeuAventure.git',
                 'demo': None
             },
             {
@@ -132,7 +132,6 @@ def get_portfolio_data():
                     get_media_url('aventure3d_demo.mp4', 'videos')
                 ],
                 'main_image': get_media_url('aventure3d_1.jpg', 'projects'),
-                'github': 'https://github.com/andyrakoto/aventure3d-unreal',
                 'demo': None
             },
             {
@@ -148,7 +147,24 @@ def get_portfolio_data():
                     get_media_url('openworld_demo.mp4', 'videos')
                 ],
                 'main_image': get_media_url('openworld_1.jpg', 'projects'),
-                'github': 'https://github.com/andyrakoto/aventure-openworld',
+                'github': 'https://github.com/MialyAnderson/OpenWorld.git',
+                'demo': None,
+                'status': 'En développement'
+            },
+            {
+                'id': 5,
+                'title': 'Jeu de tir à la 3e personne / FPS – Unreal Engine (En développement)',
+                'description': 'Projet de jeu de tir hybride avec vue à la 3e personne, basculant en vue FPS lors du tir. Implémenté actuellement : animations complètes du personnage, gestion de la caméra dynamique, impact des tirs sur objets/personnages, modes de tir (unique et rafale). IA ennemie en cours de développement.',
+                'technologies': ['Unreal Engine 5.5', 'C++', 'Blueprints', 'Animation Blueprint', 'State Machines', 'Line Trace', 'Niagara FX'],
+                'images': [
+                    get_media_url('fps_tps_1.jpg', 'projects'),
+                    get_media_url('fps_tps_2.jpg', 'projects'),
+                ],
+                'videos': [
+                    get_media_url('fps_tps_demo.mp4', 'videos')
+                ],
+                'main_image': get_media_url('fps_tps_1.jpg', 'projects'),
+                'github': 'https://github.com/MialyAnderson/JeuTir.git',
                 'demo': None,
                 'status': 'En développement'
             }
