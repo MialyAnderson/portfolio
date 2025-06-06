@@ -64,7 +64,7 @@ def save_contact_message(data):
 def get_portfolio_data():
     return {
         'about': {
-            'name': 'Mialy Anderson RAKOTONDRADADANO',
+            'name': 'Mialy Anderson RAKOTONDRADANO',
             'title': 'Développeur Full Stack',
             'description': 'Passionné par le développement web, les jeux vidéo et les nouvelles technologies. Je me spécialise en programmation avec Python, C++, Java ainsi qu’en conception de jeux avec Unreal Engine.',
             'email': 'andyrakotondradano@gmail.com',
