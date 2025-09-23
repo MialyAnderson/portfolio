@@ -60,115 +60,322 @@ def save_contact_message(data):
     with open(messages_file, 'w') as f:
         json.dump(messages, f, indent=2)
 
-# Données du portfolio avec vos informations
+# Données du portfolio avec catégories de projets
 def get_portfolio_data():
     return {
         'about': {
             'name': 'Mialy Anderson RAKOTONDRADANO',
             'title': 'Développeur Full Stack',
-            'description': 'Passionné par le développement web, les jeux vidéo et les nouvelles technologies. Je me spécialise en programmation avec Python, C++, Java ainsi qu’en conception de jeux avec Unreal Engine.',
+            'description': 'Passionné par le développement web, les jeux vidéo et les nouvelles technologies. Je me spécialise en programmation avec Python, C++, Java ainsi qu\'en conception de jeux avec Unreal Engine.',
             'email': 'andyrakotondradano@gmail.com',
             'phone': '+1 579 372 6108',
             'location': 'Montréal, QC',
             'profile_image': get_media_url('profile.jpg', 'profile')
         },
         'skills': [
-            {'name': 'Python', 'level': 90},
-            {'name': 'JavaScript', 'level': 85},
-            {'name': 'Java', 'level': 90},
-            {'name': 'C', 'level': 75},
-            {'name': 'C++', 'level': 90},
-            {'name': 'Unreal Engine', 'level': 85},
-            {'name': 'Unity Engine', 'level': 90},
-            {'name': 'SQL', 'level': 70},
-            {'name': 'Git', 'level': 90},
-            {'name': 'Flask/Django', 'level': 80},
-            {'name': 'HTML/CSS', 'level': 85}
+            {'name': 'Python', 'level': 90, 'category': 'Backend'},
+            {'name': 'JavaScript', 'level': 85, 'category': 'Frontend'},
+            {'name': 'Java', 'level': 90, 'category': 'Backend'},
+            {'name': 'C', 'level': 75, 'category': 'Système'},
+            {'name': 'C++', 'level': 90, 'category': 'Jeux'},
+            {'name': 'Unreal Engine', 'level': 85, 'category': 'Jeux'},
+            {'name': 'Unity Engine', 'level': 90, 'category': 'Jeux'},
+            {'name': 'SQL', 'level': 70, 'category': 'Base de données'},
+            {'name': 'Git', 'level': 90, 'category': 'Outils'},
+            {'name': 'Flask/Django', 'level': 80, 'category': 'Backend'},
+            {'name': 'HTML/CSS', 'level': 85, 'category': 'Frontend'},
+            {'name': 'React', 'level': 75, 'category': 'Frontend'},
+            {'name': 'Spring Boot', 'level': 85, 'category': 'Backend'},
+            {'name': 'Angular', 'level': 80, 'category': 'Frontend'}
         ],
-        'projects': [
+        'experience': [
             {
                 'id': 1,
-                'title': 'Simulateur de conduite en 3D avec Unreal Engine et Chaos Vehicle',
-                'description': 'Simulateur de conduite développé sous Unreal Engine 5.5 avec physique réaliste basée sur ChaosVehicle. Contrôle complet du véhicule (freinage, marche arrière, caméra dynamique), matériaux personnalisés et système d\'entrée en C++ sans Blueprint parent.',
-                'technologies': ['Unreal Engine 5.5', 'C++', 'Chaos Vehicle', 'Niagara', 'Blueprint', 'Skeletal Mesh', 'Enhanced Input System'],
-                'images': [
-                    get_media_url('simulateur_1.jpg', 'projects'),
-                    get_media_url('simulateur_2.jpg', 'projects'),
+                'title': 'Développeur Full Stack Java Spring/Angular',
+                'company': 'Shop Imerina',
+                'location': 'Antananarivo, Madagascar',
+                'type': 'Télétravail',
+                'period': 'Septembre 2023 - Présent',
+                'duration': 'En cours',
+                'description': 'Développement d\'applications de gestion pour le commerce en ligne spécialisé dans les produits malgaches.',
+                'responsibilities': [
+                    'Gestion d\'approvisionnement : entrée et sortie de stocks, bon de commande, facturation, bon de livraison, facturation, tableau de bord',
+                    'Gestion de stock : développement d\'un système de suivi des entrées et sorties de produits avec gestion des mouvements selon les méthodes FIFO, inventaire en temps réel, tableaux de bord dynamiques',
+                    'Facturation : génération automatique des bons de commande, bons de livraison'
                 ],
-                'videos': [
-                    get_media_url('simulateur_demo.mp4', 'videos')
+                'activities': [
+                    'Développement des applications, suivis des tests d\'intégration et de performances',
+                    'Implémentation des bonnes pratiques en matière de sécurité des données et protection des informations sensibles',
+                    'Déploiement et mise en production des applications',
+                    'Rédaction des manuels d\'utilisation et maintenances des applications',
+                    'Débogage et résolution de bugs complexes : Analyse des erreurs et dysfonctionnements dans le code source',
+                    'Participation à l\'analyse des besoins des utilisateurs et à la définition des spécifications techniques',
+                    'Conception, développement, test et déploiement des applications Java',
+                    'Maintenance évolutive et corrective des applications existantes',
+                    'Revue de code et transmission de feedbacks constructifs',
+                    'Codage'
                 ],
-                'main_image': get_media_url('simulateur_1.jpg', 'projects'),
-                'github': 'https://github.com/MialyAnderson/SimulateurVoiture.git',
-                'demo': None
-            },
-            {
-                'id': 2,
-                'title': 'JeuAventure - Jeu d\'aventure 3D avec IA Unity',
-                'description': 'Jeu d\'aventure/plateforme 3D avec système de collection, sauvetage d\'amis et combat contre des ennemis intelligents. Mécaniques physiques réalistes, effets visuels avancés et IA basée sur NavMesh pour les comportements ennemis.',
-                'technologies': ['Unity 6.1', 'C#', 'Universal Render Pipeline', 'NavMesh AI', 'iTween', 'Post-Processing', 'Terrain Tools', 'Particle Systems'],
-                'images': [
-                    get_media_url('jeuaventure_1.jpg', 'projects'),
-                    get_media_url('jeuaventure_2.jpg', 'projects'),
-                ],
-                'videos': [
-                    get_media_url('jeuaventure_demo.mp4', 'videos')
-                ],
-                'main_image': get_media_url('jeuaventure_1.jpg', 'projects'),
-                'github': 'https://github.com/MialyAnderson/JeuAventure.git',
-                'demo': None
-            },
-            {
-                'id': 3,
-                'title': 'Aventure 3D - Jeu d\'exploration et collecte avec Unreal Engine',
-                'description': 'Jeu d\'aventure 3D développé entièrement avec le système Blueprint d\'Unreal Engine 5.5. Le joueur explore un monde ouvert en collectant des pièces, utilise un système de vol pour atteindre des zones élevées, et résout des énigmes avec un mécanisme clé-porte pour débloquer de nouvelles zones d\'exploration.',
-                'technologies': ['Unreal Engine 5.5', 'Blueprint Visual Scripting', 'Third Person Character', 'Enhanced Input System', 'Collision Detection', 'Level Design', 'Animation Blueprint', 'Particle Systems'],
-                'images': [
-                    get_media_url('aventure3d_1.jpg', 'projects'),
-                    get_media_url('aventure3d_2.jpg', 'projects'),
-                    get_media_url('aventure3d_3.jpg', 'projects'),
-                ],
-                'videos': [
-                    get_media_url('aventure3d_demo.mp4', 'videos')
-                ],
-                'main_image': get_media_url('aventure3d_1.jpg', 'projects'),
-                'demo': None
-            },
-            {
-                'id': 4,
-                'title': 'Aventure Open World - Jeu de quêtes 3D Unity (En développement)',
-                'description': 'Jeu d\'aventure open world en développement sous Unity avec système de quêtes immersif. Actuellement implémenté : map complète et système de mouvement avancé du personnage avec physiques réalistes (marche, course, saut), animations fluides et effets visuels. Projet en cours de développement avec mécaniques de quêtes et interactions à venir.',
-                'technologies': ['Unity 6.1', 'C#', 'Rigidbody Physics', 'Animator Controller', 'Particle Systems', 'Audio System', 'Input System', 'LayerMask', 'Raycast Detection'],
-                'images': [
-                    get_media_url('openworld_1.jpg', 'projects'),
-                    get_media_url('openworld_2.jpg', 'projects'),
-                ],
-                'videos': [
-                    get_media_url('openworld_demo.mp4', 'videos')
-                ],
-                'main_image': get_media_url('openworld_1.jpg', 'projects'),
-                'github': 'https://github.com/MialyAnderson/OpenWorld.git',
-                'demo': None,
-                'status': 'En développement'
-            },
-            {
-                'id': 5,
-                'title': 'Jeu de tir à la 3e personne / FPS – Unreal Engine (En développement)',
-                'description': 'Projet de jeu de tir hybride avec vue à la 3e personne, basculant en vue FPS lors du tir. Implémenté actuellement : animations complètes du personnage, gestion de la caméra dynamique, impact des tirs sur objets/personnages, modes de tir (unique et rafale). IA ennemie en cours de développement.',
-                'technologies': ['Unreal Engine 5.5', 'C++', 'Blueprints', 'Animation Blueprint', 'State Machines', 'Line Trace', 'Niagara FX'],
-                'images': [
-                    get_media_url('fps_tps_1.jpg', 'projects'),
-                    get_media_url('fps_tps_2.jpg', 'projects'),
-                ],
-                'videos': [
-                    get_media_url('fps_tps_demo.mp4', 'videos')
-                ],
-                'main_image': get_media_url('fps_tps_1.jpg', 'projects'),
-                'github': 'https://github.com/MialyAnderson/JeuTir.git',
-                'demo': None,
-                'status': 'En développement'
+                'technologies': ['Java', 'Spring Boot', 'Angular', 'TypeScript', 'MySQL', 'Git', 'REST API', 'Maven', 'IntelliJ IDEA'],
+                'achievements': [
+                    'Développement complet d\'un système de gestion des stocks avec méthode FIFO',
+                    'Mise en place d\'un système de facturation automatisé',
+                    'Optimisation des performances des requêtes de base de données',
+                    'Implémentation de bonnes pratiques de sécurité'
+                ]
             }
         ],
+        'project_categories': [
+            {
+                'id': 'games',
+                'name': 'Jeux Vidéo',
+                'description': 'Créations ludiques avec Unreal Engine et Unity',
+                'icon': 'fas fa-gamepad',
+                'color': '#e74c3c',
+                'gradient': 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)'
+            },
+            {
+                'id': 'software',
+                'name': 'Logiciels',
+                'description': 'Applications desktop et outils spécialisés',
+                'icon': 'fas fa-desktop',
+                'color': '#3498db',
+                'gradient': 'linear-gradient(135deg, #3498db 0%, #2980b9 100%)'
+            },
+            {
+                'id': 'web',
+                'name': 'Sites Web',
+                'description': 'Applications web modernes et responsives',
+                'icon': 'fas fa-globe',
+                'color': '#2ecc71',
+                'gradient': 'linear-gradient(135deg, #2ecc71 0%, #27ae60 100%)'
+            },
+            {
+                'id': 'ai',
+                'name': 'Intelligence Artificielle',
+                'description': 'Projets IA, Machine Learning et Deep Learning',
+                'icon': 'fas fa-brain',
+                'color': '#9b59b6',
+                'gradient': 'linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%)'
+            }
+        ],
+        'projects': {
+            'games': [
+                {
+                    'id': 1,
+                    'title': 'Simulateur de conduite en 3D avec Unreal Engine et Chaos Vehicle',
+                    'description': 'Simulateur de conduite développé sous Unreal Engine 5.5 avec physique réaliste basée sur ChaosVehicle. Contrôle complet du véhicule (freinage, marche arrière, caméra dynamique), matériaux personnalisés et système d\'entrée en C++ sans Blueprint parent.',
+                    'technologies': ['Unreal Engine 5.5', 'C++', 'Chaos Vehicle', 'Niagara', 'Blueprint', 'Skeletal Mesh', 'Enhanced Input System'],
+                    'images': [
+                        get_media_url('simulateur_1.jpg', 'projects'),
+                        get_media_url('simulateur_2.jpg', 'projects'),
+                    ],
+                    'videos': [
+                        get_media_url('simulateur_demo.mp4', 'videos')
+                    ],
+                    'main_image': get_media_url('simulateur_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/SimulateurVoiture.git',
+                    'demo': None,
+                    'category': 'games',
+                },
+                {
+                    'id': 2,
+                    'title': 'JeuAventure - Jeu d\'aventure 3D avec IA Unity',
+                    'description': 'Jeu d\'aventure/plateforme 3D avec système de collection, sauvetage d\'amis et combat contre des ennemis intelligents. Mécaniques physiques réalistes, effets visuels avancés et IA basée sur NavMesh pour les comportements ennemis.',
+                    'technologies': ['Unity 6.1', 'C#', 'Universal Render Pipeline', 'NavMesh AI', 'iTween', 'Post-Processing', 'Terrain Tools', 'Particle Systems'],
+                    'images': [
+                        get_media_url('jeuaventure_1.jpg', 'projects'),
+                        get_media_url('jeuaventure_2.jpg', 'projects'),
+                    ],
+                    'videos': [
+                        get_media_url('jeuaventure_demo.mp4', 'videos')
+                    ],
+                    'main_image': get_media_url('jeuaventure_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/JeuAventure.git',
+                    'demo': None,
+                    'category': 'games',
+                },
+                {
+                    'id': 3,
+                    'title': 'Aventure 3D - Jeu d\'exploration et collecte avec Unreal Engine',
+                    'description': 'Jeu d\'aventure 3D développé entièrement avec le système Blueprint d\'Unreal Engine 5.5. Le joueur explore un monde ouvert en collectant des pièces, utilise un système de vol pour atteindre des zones élevées, et résout des énigmes avec un mécanisme clé-porte pour débloquer de nouvelles zones d\'exploration.',
+                    'technologies': ['Unreal Engine 5.5', 'Blueprint Visual Scripting', 'Third Person Character', 'Enhanced Input System', 'Collision Detection', 'Level Design', 'Animation Blueprint', 'Particle Systems'],
+                    'images': [
+                        get_media_url('aventure3d_1.jpg', 'projects'),
+                        get_media_url('aventure3d_2.jpg', 'projects'),
+                        get_media_url('aventure3d_3.jpg', 'projects'),
+                    ],
+                    'videos': [
+                        get_media_url('aventure3d_demo.mp4', 'videos')
+                    ],
+                    'main_image': get_media_url('aventure3d_1.jpg', 'projects'),
+                    'demo': None,
+                    'category': 'games'
+                },
+                {
+                    'id': 4,
+                    'title': 'Aventure Open World - Jeu de quêtes 3D Unity (En développement)',
+                    'description': 'Jeu d\'aventure open world en développement sous Unity avec système de quêtes immersif. Actuellement implémenté : map complète et système de mouvement avancé du personnage avec physiques réalistes (marche, course, saut), animations fluides et effets visuels. Projet en cours de développement avec mécaniques de quêtes et interactions à venir.',
+                    'technologies': ['Unity 6.1', 'C#', 'Rigidbody Physics', 'Animator Controller', 'Particle Systems', 'Audio System', 'Input System', 'LayerMask', 'Raycast Detection'],
+                    'images': [
+                        get_media_url('openworld_1.jpg', 'projects'),
+                        get_media_url('openworld_2.jpg', 'projects'),
+                    ],
+                    'videos': [
+                        get_media_url('openworld_demo.mp4', 'videos')
+                    ],
+                    'main_image': get_media_url('openworld_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/OpenWorld.git',
+                    'demo': None,
+                    'status': 'En développement',
+                    'category': 'games'
+                },
+                {
+                    'id': 5,
+                    'title': 'Jeu de tir à la 3e personne / FPS – Unreal Engine (En développement)',
+                    'description': 'Projet de jeu de tir hybride avec vue à la 3e personne, basculant en vue FPS lors du tir. Implémenté actuellement : animations complètes du personnage, gestion de la caméra dynamique, impact des tirs sur objets/personnages, modes de tir (unique et rafale). IA ennemie en cours de développement.',
+                    'technologies': ['Unreal Engine 5.5', 'C++', 'Blueprints', 'Animation Blueprint', 'State Machines', 'Line Trace', 'Niagara FX'],
+                    'images': [
+                        get_media_url('fps_tps_1.jpg', 'projects'),
+                        get_media_url('fps_tps_2.jpg', 'projects'),
+                    ],
+                    'videos': [
+                        get_media_url('fps_tps_demo.mp4', 'videos')
+                    ],
+                    'main_image': get_media_url('fps_tps_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/JeuTir.git',
+                    'demo': None,
+                    'status': 'En développement',
+                    'category': 'games'
+                }
+            ],
+            'software': [
+                {
+                    'id': 6,
+                    'title': 'Gestionnaire de Tâches Avancé - Python',
+                    'description': 'Application desktop développée en Python avec interface PyQt pour la gestion avancée de tâches et projets. Fonctionnalités : planification, rappels, statistiques, synchronisation cloud et système de productivité intégré.',
+                    'technologies': ['Python', 'PyQt5', 'SQLite', 'JSON', 'Threading', 'Matplotlib'],
+                    'images': [
+                        get_media_url('task_manager_1.jpg', 'projects'),
+                        get_media_url('task_manager_2.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('task_manager_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/TaskManager.git',
+                    'category': 'software',
+                },
+                {
+                    'id': 7,
+                    'title': 'Analyseur de Performance Système - C++',
+                    'description': 'Outil de monitoring système développé en C++ pour analyser les performances en temps réel. Surveillance CPU, mémoire, disque et réseau avec interface graphique native et alertes configurables.',
+                    'technologies': ['C++', 'Qt', 'WinAPI', 'Threading', 'Charts', 'System APIs'],
+                    'images': [
+                        get_media_url('system_monitor_1.jpg', 'projects'),
+                        get_media_url('system_monitor_2.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('system_monitor_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/SystemMonitor.git',
+                    'category': 'software'
+                },
+                {
+                    'id': 8,
+                    'title': 'IDE Personnalisé - Java',
+                    'description': 'Environnement de développement intégré personnalisé développé en Java avec Swing. Fonctionnalités : éditeur de code avec coloration syntaxique, débogueur intégré, gestionnaire de projets et plugins extensibles.',
+                    'technologies': ['Java', 'Swing', 'ANTLR', 'Maven', 'Git Integration', 'Plugin System'],
+                    'images': [
+                        get_media_url('ide_java_1.jpg', 'projects'),
+                        get_media_url('ide_java_2.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('ide_java_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/CustomIDE.git',
+                    'category': 'software'
+                }
+            ],
+            'web': [
+                {
+                    'id': 9,
+                    'title': 'Jeux by Anderson - Plateforme de Jeux en Ligne',
+                    'description': 'Plateforme de jeux de société en ligne permettant de jouer avec des amis ou d\'autres joueurs. Propose une collection de jeux classiques incluant Tic-Tac-Toe, Échecs et Shogi (échecs japonais) avec interface interactive et gameplay multijoueur.',
+                    'technologies': ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Socket.io', 'Express.js', 'Game Logic'],
+                    'images': [
+                        get_media_url('jeux_anderson_1.jpg', 'projects'),
+                        get_media_url('jeux_anderson_2.jpg', 'projects'),
+                        get_media_url('jeux_anderson_3.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('jeux_anderson_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/JeuxByAnderson.git',
+                    'demo': 'https://jeuxbyanderson-5yke.onrender.com/',
+                    'category': 'web',
+                },
+                {
+                    'id': 10,
+                    'title': 'Contraventions Montréal - Recherche d\'Infractions Alimentaires',
+                    'description': 'Application web permettant de rechercher et consulter les contraventions alimentaires des restaurants de Montréal. Interface de recherche rapide avec affichage détaillé des infractions incluant l\'établissement, le nombre de contraventions, les dates, descriptions et montants des amendes.',
+                    'technologies': ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'API Integration', 'Data Processing', 'Bootstrap'],
+                    'images': [
+                        get_media_url('contraventions_mtl_1.jpg', 'projects'),
+                        get_media_url('contraventions_mtl_2.jpg', 'projects'),
+                        get_media_url('contraventions_mtl_3.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('contraventions_mtl_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/ContraventionsMontreal.git',
+                    'demo': 'https://contravention-montreal-wlpz.onrender.com/',
+                    'category': 'web',
+                },
+                {
+                    'id': 11,
+                    'title': 'FillGood - Boutique de Créations au Crochet',
+                    'description': 'Site e-commerce spécialisé dans la vente de créations artisanales au crochet et macramé. Catalogue diversifié incluant vêtements pour bébé (brassières, bonnets), accessoires décoratifs, jouets (amigurumi, jeux éducatifs), et articles de mode fait main. Chaque pièce est unique et confectionnée avec soin.',
+                    'technologies': ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLite', 'Bootstrap', 'E-commerce', 'Image Gallery'],
+                    'images': [
+                        get_media_url('fillgood_1.jpg', 'projects'),
+                        get_media_url('fillgood_2.jpg', 'projects'),
+                        get_media_url('fillgood_3.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('fillgood_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/FillGood-Crochet.git',
+                    'demo': 'http://fillgood-decobyat-4n9e.onrender.com/',
+                    'category': 'web'
+                }
+            ],
+            'ai': [
+                {
+                    'id': 12,
+                    'title': 'Jeu ±123D - Bot IA avec Algorithme Minimax',
+                    'description': 'Implémentation d\'un bot intelligent pour le jeu ±123D utilisant l\'algorithme Minimax avec élagage alpha-beta. Jeu de stratégie à deux joueurs sur plateau 1D avec drapeau, développé en Python avec interface graphique et mode console.',
+                    'technologies': ['Java', 'Minimax Algorithm', 'Alpha-Beta Pruning', 'Game AI', 'Strategy Game', 'GUI', 'Object-oriented Programming'],
+                    'main_image': get_media_url('plus_minus_123d_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/PlusMinus123D.git',
+                    'category': 'ai',
+                },
+                {
+                    'id': 13,
+                    'title': 'Monde des Wumpus - Résolution par MDP et Itération par Valeurs',
+                    'description': 'Implémentation d\'un agent intelligent pour naviguer dans le monde des Wumpus en utilisant un Processus de Décision Markovien (MDP). L\'agent utilise l\'algorithme d\'itération par valeurs pour optimiser sa stratégie de collecte d\'or tout en évitant les monstres et obstacles dans un environnement stochastique.',
+                    'technologies': ['Python', 'Markov Decision Process', 'Value Iteration', 'Reinforcement Learning', 'AI Planning', 'Stochastic Environment', 'Game Theory'],
+                    'images': [
+                        get_media_url('wumpus_world_1.jpg', 'projects'),
+                        get_media_url('wumpus_world_2.jpg', 'projects'),
+                        get_media_url('wumpus_world_3.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('wumpus_world_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/WumpusWorldMDP.git',
+                    'category': 'ai',
+                },
+                {
+                    'id': 14,
+                    'title': 'Prédiction Immobilière - Algorithme KNN (k-nearest neighbors)',
+                    'description': 'Système de prédiction des valeurs de propriétés immobilières utilisant l\'algorithme des k plus proches voisins (KNN). Le programme entraîne un modèle sur des données historiques et prédit les prix de nouvelles propriétés avec calcul d\'erreur quadratique moyenne pour évaluer la précision.',
+                    'technologies': ['Python', 'Java', 'C++', 'K-Nearest Neighbors', 'Machine Learning', 'Data Analysis', 'CSV Processing', 'Real Estate Prediction'],
+                    'images': [
+                        get_media_url('knn_real_estate_1.jpg', 'projects'),
+                        get_media_url('knn_real_estate_2.jpg', 'projects'),
+                        get_media_url('knn_real_estate_3.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('knn_real_estate_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/RealEstatePredictionKNN.git',
+                    'category': 'ai',
+                }
+            ]
+        }
     }
 
 @app.route('/')
@@ -177,17 +384,40 @@ def index():
     data = get_portfolio_data()
     return render_template('index.html', data=data)
 
+@app.route('/api/experience')
+def get_experience():
+    """API pour récupérer l'expérience professionnelle"""
+    data = get_portfolio_data()
+    return jsonify(data['experience'])
+
 @app.route('/api/projects')
 def get_projects():
     """API pour récupérer tous les projets"""
     data = get_portfolio_data()
     return jsonify(data['projects'])
 
-@app.route('/api/projects/<int:project_id>')
+@app.route('/api/projects/<category>')
+def get_projects_by_category(category):
+    """API pour récupérer les projets d'une catégorie"""
+    data = get_portfolio_data()
+    projects = data['projects'].get(category, [])
+    return jsonify(projects)
+
+@app.route('/api/project/<int:project_id>')
 def get_project(project_id):
     """API pour récupérer un projet spécifique"""
     data = get_portfolio_data()
-    project = next((p for p in data['projects'] if p['id'] == project_id), None)
+    project = None
+    
+    # Chercher dans toutes les catégories
+    for category_projects in data['projects'].values():
+        for p in category_projects:
+            if p['id'] == project_id:
+                project = p
+                break
+        if project:
+            break
+    
     if project:
         return jsonify(project)
     return jsonify({'error': 'Project not found'}), 404
@@ -196,7 +426,17 @@ def get_project(project_id):
 def get_project_media(project_id):
     """API pour récupérer tous les médias d'un projet"""
     data = get_portfolio_data()
-    project = next((p for p in data['projects'] if p['id'] == project_id), None)
+    project = None
+    
+    # Chercher dans toutes les catégories
+    for category_projects in data['projects'].values():
+        for p in category_projects:
+            if p['id'] == project_id:
+                project = p
+                break
+        if project:
+            break
+    
     if project:
         media = {
             'images': project.get('images', []),
@@ -205,6 +445,19 @@ def get_project_media(project_id):
         }
         return jsonify(media)
     return jsonify({'error': 'Project not found'}), 404
+
+@app.route('/api/featured-projects')
+def get_featured_projects():
+    """API pour récupérer les projets mis en avant"""
+    data = get_portfolio_data()
+    featured = []
+    
+    for category_projects in data['projects'].values():
+        for project in category_projects:
+            if project.get('featured', False):
+                featured.append(project)
+    
+    return jsonify(featured)
 
 @app.route('/api/contact', methods=['POST'])
 def contact():
@@ -262,93 +515,6 @@ def upload_media():
 def uploaded_file(filename):
     """Route pour servir les fichiers média"""
     return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-
-@app.route('/create-placeholders')
-def create_placeholders():
-    """Crée des images et vidéos de placeholder pour tester"""
-    try:
-        from PIL import Image, ImageDraw, ImageFont
-        
-        placeholders = [
-            # Images de projets
-            ('projects/simulateur_main.jpg', 'Simulateur\nUnreal Engine', (70, 130, 180)),
-            ('projects/simulateur_1.jpg', 'Vue Conduite\nSimulateur', (85, 145, 195)),
-            ('projects/simulateur_2.jpg', 'Physique\nChaos Vehicle', (100, 160, 210)),
-            ('projects/simulateur_3.jpg', 'Interface\nUtilisateur', (115, 175, 225)),
-            
-            ('projects/portfolio_main.jpg', 'Portfolio\nFlask', (34, 139, 34)),
-            ('projects/portfolio_1.jpg', 'Interface\nResponsive', (49, 154, 49)),
-            ('projects/portfolio_2.jpg', 'Animations\nModernes', (64, 169, 64)),
-            
-            ('projects/farmshop_main.jpg', 'Farmshop\nMadagascar', (220, 20, 60)),
-            ('projects/farmshop_1.jpg', 'Gestion\nStocks', (235, 35, 75)),
-            ('projects/farmshop_2.jpg', 'Interface\nAdmin', (250, 50, 90)),
-            
-            # Image de profil
-            ('profile/profile.jpg', 'Rakotondradano\nMialy Anderson', (128, 128, 128)),
-            
-            # Placeholder général
-            ('placeholder.jpg', 'Image\nPlaceholder', (169, 169, 169))
-        ]
-        
-        created_files = []
-        
-        for filename, text, color in placeholders:
-            file_path = f'static/media/{filename}'
-            os.makedirs(os.path.dirname(file_path), exist_ok=True)
-            
-            # Créer une image 400x250 (ou 400x400 pour le profil)
-            if 'profile' in filename:
-                img = Image.new('RGB', (400, 400), color=color)
-            else:
-                img = Image.new('RGB', (400, 250), color=color)
-            
-            draw = ImageDraw.Draw(img)
-            
-            # Ajouter le texte
-            lines = text.split('\n')
-            line_height = 30
-            total_height = len(lines) * line_height
-            start_y = (img.height - total_height) // 2
-            
-            for i, line in enumerate(lines):
-                # Calculer la position pour centrer le texte
-                bbox = draw.textbbox((0, 0), line)
-                text_width = bbox[2] - bbox[0]
-                x = (img.width - text_width) // 2
-                y = start_y + i * line_height
-                
-                draw.text((x, y), line, fill='white')
-            
-            img.save(file_path)
-            created_files.append(filename)
-        
-        # Créer une vidéo placeholder simple (fichier texte qui simule une vidéo)
-        video_placeholder_path = 'static/media/videos/simulateur_demo.mp4'
-        os.makedirs(os.path.dirname(video_placeholder_path), exist_ok=True)
-        
-        # Créer un fichier texte comme placeholder de vidéo
-        with open(video_placeholder_path.replace('.mp4', '_placeholder.txt'), 'w') as f:
-            f.write("Placeholder pour la vidéo de démonstration du simulateur.\n")
-            f.write("Remplacez ce fichier par votre vraie vidéo MP4.\n")
-        
-        return jsonify({
-            'success': True, 
-            'message': f'{len(created_files)} fichiers de placeholder créés',
-            'files': created_files
-        })
-        
-    except ImportError:
-        return jsonify({
-            'error': 'PIL/Pillow non installé. Installez avec: pip install Pillow',
-            'needed_files': [
-                'static/media/projects/simulateur_main.jpg',
-                'static/media/projects/portfolio_main.jpg',
-                'static/media/projects/farmshop_main.jpg',
-                'static/media/profile/profile.jpg',
-                'static/media/videos/simulateur_demo.mp4'
-            ]
-        })
 
 @app.route('/admin')
 def admin():
