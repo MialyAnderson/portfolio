@@ -251,42 +251,33 @@ def get_portfolio_data():
             'software': [
                 {
                     'id': 6,
-                    'title': 'Gestionnaire de Tâches Avancé - Python',
-                    'description': 'Application desktop développée en Python avec interface PyQt pour la gestion avancée de tâches et projets. Fonctionnalités : planification, rappels, statistiques, synchronisation cloud et système de productivité intégré.',
-                    'technologies': ['Python', 'PyQt5', 'SQLite', 'JSON', 'Threading', 'Matplotlib'],
+                    'title': 'Bataille Navale - Jeu en Console C',
+                    'description': 'Implémentation complète du jeu de bataille navale en langage C avec interface console interactive. Gestion du plateau de jeu 6x6, placement des navires, système de tir, détection des coulés et statistiques de jeu. Code structuré avec makefile pour compilation.',
+                    'technologies': ['C', 'Console Interface', 'Data Structures', 'Game Logic', 'File I/O', 'Makefile', 'Memory Management'],
                     'images': [
-                        get_media_url('task_manager_1.jpg', 'projects'),
-                        get_media_url('task_manager_2.jpg', 'projects'),
+                        get_media_url('bataille_navale_1.jpg', 'projects'),
+                        get_media_url('bataille_navale_2.jpg', 'projects'),
+                        get_media_url('bataille_navale_3.jpg', 'projects'),
                     ],
-                    'main_image': get_media_url('task_manager_1.jpg', 'projects'),
-                    'github': 'https://github.com/MialyAnderson/TaskManager.git',
+                    'main_image': get_media_url('bataille_navale_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/BatailleNavale.git',
                     'category': 'software',
                 },
                 {
                     'id': 7,
-                    'title': 'Analyseur de Performance Système - C++',
-                    'description': 'Outil de monitoring système développé en C++ pour analyser les performances en temps réel. Surveillance CPU, mémoire, disque et réseau avec interface graphique native et alertes configurables.',
-                    'technologies': ['C++', 'Qt', 'WinAPI', 'Threading', 'Charts', 'System APIs'],
+                    'title': 'SpaceTaxi Tower Defense - Jeu Java avec Interface Graphique',
+                    'description': 'Jeu de tower defense développé en Java avec interface graphique complète. Le joueur défend son château contre des vagues d\'ennemis en plaçant stratégiquement des tours. Système de génération d\'ennemis, gestion des projectiles, interface utilisateur interactive avec boutons d\'amélioration et économie de jeu intégrée.',
+                    'technologies': ['Java', 'Swing', 'AWT', 'Graphics2D', 'Game Development', 'Object-Oriented Design', 'Event Handling', 'GUI Design'],
                     'images': [
-                        get_media_url('system_monitor_1.jpg', 'projects'),
-                        get_media_url('system_monitor_2.jpg', 'projects'),
+                        get_media_url('spacetaxi_tower_defense_1.jpg', 'projects'),
+                        get_media_url('spacetaxi_tower_defense_2.jpg', 'projects'),
+                        get_media_url('spacetaxi_tower_defense_3.jpg', 'projects'),
+                        get_media_url('spacetaxi_tower_defense_4.jpg', 'projects'),
                     ],
-                    'main_image': get_media_url('system_monitor_1.jpg', 'projects'),
-                    'github': 'https://github.com/MialyAnderson/SystemMonitor.git',
-                    'category': 'software'
-                },
-                {
-                    'id': 8,
-                    'title': 'IDE Personnalisé - Java',
-                    'description': 'Environnement de développement intégré personnalisé développé en Java avec Swing. Fonctionnalités : éditeur de code avec coloration syntaxique, débogueur intégré, gestionnaire de projets et plugins extensibles.',
-                    'technologies': ['Java', 'Swing', 'ANTLR', 'Maven', 'Git Integration', 'Plugin System'],
-                    'images': [
-                        get_media_url('ide_java_1.jpg', 'projects'),
-                        get_media_url('ide_java_2.jpg', 'projects'),
-                    ],
-                    'main_image': get_media_url('ide_java_1.jpg', 'projects'),
-                    'github': 'https://github.com/MialyAnderson/CustomIDE.git',
-                    'category': 'software'
+                    'main_image': get_media_url('spacetaxi_tower_defense_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/SpaceTaxiTowerDefense.git',
+                    'category': 'software',
+                    'featured': True
                 }
             ],
             'web': [
