@@ -261,7 +261,7 @@ def get_portfolio_data():
                     ],
                     'main_image': get_media_url('bataille_navale_1.jpg', 'projects'),
                     'github': 'https://github.com/MialyAnderson/BatailleNavale.git',
-                    'category': 'software',
+                    'category': 'software'
                 },
                 {
                     'id': 7,
@@ -276,8 +276,22 @@ def get_portfolio_data():
                     ],
                     'main_image': get_media_url('spacetaxi_tower_defense_1.jpg', 'projects'),
                     'github': 'https://github.com/MialyAnderson/SpaceTaxiTowerDefense.git',
-                    'category': 'software',
-                    'featured': True
+                    'category': 'software'
+                },
+                {
+                    'id': 8,
+                    'title': 'Automates Cellulaires Unidimensionnels - OCaml',
+                    'description': 'Implémentation complète d\'automates cellulaires unidimensionnels en programmation fonctionnelle avec OCaml. Le projet inclut la simulation d\'automates comme Sierpinski et chaos, avec fonctions d\'évolution, mémoïsation pour l\'optimisation, et interface en ligne de commande pour la visualisation des motifs générés.',
+                    'technologies': ['OCaml', 'Functional Programming', 'Cellular Automata', 'Dune Build System', 'Pattern Matching', 'Memoization', 'Mathematical Modeling'],
+                    'images': [
+                        get_media_url('cellular_automata_1.jpg', 'projects'),
+                        get_media_url('cellular_automata_2.jpg', 'projects'),
+                        get_media_url('cellular_automata_3.jpg', 'projects'),
+                        get_media_url('cellular_automata_4.jpg', 'projects'),
+                    ],
+                    'main_image': get_media_url('cellular_automata_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/CellularAutomata.git',
+                    'category': 'software'
                 }
             ],
             'web': [
