@@ -70,7 +70,7 @@ def get_portfolio_data():
             'email': 'andyrakotondradano@gmail.com',
             'phone': '+1 579 372 6108',
             'location': 'Montréal, QC',
-            'profile_image': get_media_url('profile.jpg', 'profile')
+            'profile_image': get_media_url('profile.png', 'profile')
         },
         'skills': [
             {'name': 'Python', 'level': 90, 'category': 'Backend'},
@@ -89,8 +89,43 @@ def get_portfolio_data():
             {'name': 'Angular', 'level': 80, 'category': 'Frontend'}
         ],
         'experience': [
-            {
+             {
                 'id': 1,
+                'title': 'Programmeur Gameplay - Concours Ubisoft Game Lab 2026 (UQAM)',
+                'company': 'Ubisoft Montréal',
+                'location': 'Montréal, QC',
+                'type': 'Compétition étudiante',
+                'period': 'Janvier 2026 - Avril 2026',
+                'duration': '4 mois',
+                'description': 'Participation au prestigieux concours Ubisoft Game Lab 2026 avec développement d\'un beat-em-up nommé A GLITCH IN TIME en intégrant le thème "année 80-90". Prototype présenté chez Ubisoft Montréal devant un jury de professionnels de l\'industrie du jeu vidéo.',
+                'responsibilities': [
+                    'Développement gameplay : système de combat avec combos, dash avec effets visuels, mécaniques de plateforme',
+                    'Programmation d\'IA : ennemis avec NavMesh AI et système d\'object pooling pour optimiser les performances',
+                    'Implémentation de l\'accessibilité : remapping des touches via ApplyBindingOverride, vibrations haptiques pour manettes',
+                    'Création d\'un système d\'animation hybride : frame-swap mesh animation custom pour le personnage 80s et Mixamo/Humanoid pour le 90s',
+                    'Développement d\'effets visuels : trails de dash, slash effects, particules pour les attaques',
+                    'Gestion d\'interface : menu pause avec navigation D-pad, système de UI accessible'
+                ],
+                'activities': [
+                    'Collaboration en équipe de 8',
+                    'Résolution de conflits Git (git checkout --ours) lors des merges complexes',
+                    'Debugging de problèmes techniques (offset Y-axis Mixamo, timing des animations)',
+                    'Présentation du prototype chez Ubisoft Montréal',
+                    'Itérations rapides basées sur les feedbacks de l\'équipe',
+                    'Architecture orientée objet avec hiérarchies de classes abstraites (PlayerBase, MovementBase)'
+                ],
+                'technologies': ['Unity 6.1', 'C#', 'Input System', 'NavMesh AI', 'Animation Events', 'Mixamo', 'VFX Graph', 'Cinemachine', 'Object Pooling', 'Git'],
+                'achievements': [
+                    'Prototype finalisé et présenté chez Ubisoft Montréal',
+                    'Implémentation de deux systèmes d\'animation distincts dans un même jeu',
+                    'Système d\'accessibilité complet (remapping + haptics)',
+                    'Architecture modulaire avec classes abstraites réutilisables',
+                    'Collaboration efficace en équipe de 4 personnes sur 4 mois'
+                ]
+            },
+
+            {
+                'id': 2,
                 'title': 'Développeur Full Stack Java Spring/Angular',
                 'company': 'Shop Imerina',
                 'location': 'Antananarivo, Madagascar',
@@ -162,6 +197,22 @@ def get_portfolio_data():
             'games': [
                 {
                     'id': 1,
+                    'title': 'CUBI 2026 - Beat-em-up Ubisoft Game Lab',
+                    'description': 'Beat-em-up développé pour le concours Ubisoft Game Lab 2026. Jeu avec deux personnages distincts (style 80s et 90s), système de combat avancé avec combos, dash avec effets visuels, ennemis IA NavMesh, et accessibilité complète. Utilise des systèmes hybrides : animation custom frame-swap pour le personnage 80s et Mixamo/Humanoid pour le 90s.',
+                    'technologies': ['Unity 6.1', 'C#', 'Input System', 'NavMesh AI', 'Animation Events', 'Object Pooling', 'VFX Graph', 'Cinemachine', 'Mixamo'],
+                    'images': [
+                        get_media_url('cubi_1.jpg', 'projects'),
+                    ],
+                    'videos': [
+                        get_media_url('cubi_demo.mp4', 'videos')
+                    ],
+                    'main_image': get_media_url('cubi_1.jpg', 'projects'),
+                    'github': 'https://github.com/MialyAnderson/CUBI-GameLab2026.git',
+                    'demo': None,
+                    'category': 'games',
+                },
+                {
+                    'id': 2,
                     'title': 'Simulateur de conduite en 3D avec Unreal Engine et Chaos Vehicle',
                     'description': 'Simulateur de conduite développé sous Unreal Engine 5.5 avec physique réaliste basée sur ChaosVehicle. Contrôle complet du véhicule (freinage, marche arrière, caméra dynamique), matériaux personnalisés et système d\'entrée en C++ sans Blueprint parent.',
                     'technologies': ['Unreal Engine 5.5', 'C++', 'Chaos Vehicle', 'Niagara', 'Blueprint', 'Skeletal Mesh', 'Enhanced Input System'],
@@ -178,7 +229,7 @@ def get_portfolio_data():
                     'category': 'games',
                 },
                 {
-                    'id': 2,
+                    'id': 3,
                     'title': 'JeuAventure - Jeu d\'aventure 3D avec IA Unity',
                     'description': 'Jeu d\'aventure/plateforme 3D avec système de collection, sauvetage d\'amis et combat contre des ennemis intelligents. Mécaniques physiques réalistes, effets visuels avancés et IA basée sur NavMesh pour les comportements ennemis.',
                     'technologies': ['Unity 6.1', 'C#', 'Universal Render Pipeline', 'NavMesh AI', 'iTween', 'Post-Processing', 'Terrain Tools', 'Particle Systems'],
@@ -195,7 +246,7 @@ def get_portfolio_data():
                     'category': 'games',
                 },
                 {
-                    'id': 3,
+                    'id': 4,
                     'title': 'Aventure 3D - Jeu d\'exploration et collecte avec Unreal Engine',
                     'description': 'Jeu d\'aventure 3D développé entièrement avec le système Blueprint d\'Unreal Engine 5.5. Le joueur explore un monde ouvert en collectant des pièces, utilise un système de vol pour atteindre des zones élevées, et résout des énigmes avec un mécanisme clé-porte pour débloquer de nouvelles zones d\'exploration.',
                     'technologies': ['Unreal Engine 5.5', 'Blueprint Visual Scripting', 'Third Person Character', 'Enhanced Input System', 'Collision Detection', 'Level Design', 'Animation Blueprint', 'Particle Systems'],
@@ -212,7 +263,7 @@ def get_portfolio_data():
                     'category': 'games'
                 },
                 {
-                    'id': 4,
+                    'id': 5,
                     'title': 'Aventure Open World - Jeu de quêtes 3D Unity (En développement)',
                     'description': 'Jeu d\'aventure open world en développement sous Unity avec système de quêtes immersif. Actuellement implémenté : map complète et système de mouvement avancé du personnage avec physiques réalistes (marche, course, saut), animations fluides et effets visuels. Projet en cours de développement avec mécaniques de quêtes et interactions à venir.',
                     'technologies': ['Unity 6.1', 'C#', 'Rigidbody Physics', 'Animator Controller', 'Particle Systems', 'Audio System', 'Input System', 'LayerMask', 'Raycast Detection'],
@@ -230,7 +281,7 @@ def get_portfolio_data():
                     'category': 'games'
                 },
                 {
-                    'id': 5,
+                    'id': 6,
                     'title': 'Jeu de tir à la 3e personne / FPS – Unreal Engine (En développement)',
                     'description': 'Projet de jeu de tir hybride avec vue à la 3e personne, basculant en vue FPS lors du tir. Implémenté actuellement : animations complètes du personnage, gestion de la caméra dynamique, impact des tirs sur objets/personnages, modes de tir (unique et rafale). IA ennemie en cours de développement.',
                     'technologies': ['Unreal Engine 5.5', 'C++', 'Blueprints', 'Animation Blueprint', 'State Machines', 'Line Trace', 'Niagara FX'],
@@ -250,7 +301,7 @@ def get_portfolio_data():
             ],
             'software': [
                 {
-                    'id': 6,
+                    'id': 7,
                     'title': 'Bataille Navale - Jeu en Console C',
                     'description': 'Implémentation complète du jeu de bataille navale en langage C avec interface console interactive. Gestion du plateau de jeu 6x6, placement des navires, système de tir, détection des coulés et statistiques de jeu. Code structuré avec makefile pour compilation.',
                     'technologies': ['C', 'Console Interface', 'Data Structures', 'Game Logic', 'File I/O', 'Makefile', 'Memory Management'],
@@ -264,7 +315,7 @@ def get_portfolio_data():
                     'category': 'software'
                 },
                 {
-                    'id': 7,
+                    'id': 8,
                     'title': 'SpaceTaxi Tower Defense - Jeu Java avec Interface Graphique',
                     'description': 'Jeu de tower defense développé en Java avec interface graphique complète. Le joueur défend son château contre des vagues d\'ennemis en plaçant stratégiquement des tours. Système de génération d\'ennemis, gestion des projectiles, interface utilisateur interactive avec boutons d\'amélioration et économie de jeu intégrée.',
                     'technologies': ['Java', 'Swing', 'AWT', 'Graphics2D', 'Game Development', 'Object-Oriented Design', 'Event Handling', 'GUI Design'],
@@ -279,7 +330,7 @@ def get_portfolio_data():
                     'category': 'software'
                 },
                 {
-                    'id': 8,
+                    'id': 9,
                     'title': 'Automates Cellulaires Unidimensionnels - OCaml',
                     'description': 'Implémentation complète d\'automates cellulaires unidimensionnels en programmation fonctionnelle avec OCaml. Le projet inclut la simulation d\'automates comme Sierpinski et chaos, avec fonctions d\'évolution, mémoïsation pour l\'optimisation, et interface en ligne de commande pour la visualisation des motifs générés.',
                     'technologies': ['OCaml', 'Functional Programming', 'Cellular Automata', 'Dune Build System', 'Pattern Matching', 'Memoization', 'Mathematical Modeling'],
@@ -296,7 +347,7 @@ def get_portfolio_data():
             ],
             'web': [
                 {
-                    'id': 9,
+                    'id': 10,
                     'title': 'Jeux by Anderson - Plateforme de Jeux en Ligne',
                     'description': 'Plateforme de jeux de société en ligne permettant de jouer avec des amis ou d\'autres joueurs. Propose une collection de jeux classiques incluant Tic-Tac-Toe, Échecs et Shogi (échecs japonais) avec interface interactive et gameplay multijoueur.',
                     'technologies': ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Socket.io', 'Express.js', 'Game Logic'],
@@ -311,7 +362,7 @@ def get_portfolio_data():
                     'category': 'web',
                 },
                 {
-                    'id': 10,
+                    'id': 11,
                     'title': 'Contraventions Montréal - Recherche d\'Infractions Alimentaires',
                     'description': 'Application web permettant de rechercher et consulter les contraventions alimentaires des restaurants de Montréal. Interface de recherche rapide avec affichage détaillé des infractions incluant l\'établissement, le nombre de contraventions, les dates, descriptions et montants des amendes.',
                     'technologies': ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'API Integration', 'Data Processing', 'Bootstrap'],
@@ -326,7 +377,7 @@ def get_portfolio_data():
                     'category': 'web',
                 },
                 {
-                    'id': 11,
+                    'id': 12,
                     'title': 'FillGood - Boutique de Créations au Crochet',
                     'description': 'Site e-commerce spécialisé dans la vente de créations artisanales au crochet et macramé. Catalogue diversifié incluant vêtements pour bébé (brassières, bonnets), accessoires décoratifs, jouets (amigurumi, jeux éducatifs), et articles de mode fait main. Chaque pièce est unique et confectionnée avec soin.',
                     'technologies': ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLite', 'Bootstrap', 'E-commerce', 'Image Gallery'],
@@ -343,7 +394,7 @@ def get_portfolio_data():
             ],
             'ai': [
                 {
-                    'id': 12,
+                    'id': 13,
                     'title': 'Jeu ±123D - Bot IA avec Algorithme Minimax',
                     'description': 'Implémentation d\'un bot intelligent pour le jeu ±123D utilisant l\'algorithme Minimax avec élagage alpha-beta. Jeu de stratégie à deux joueurs sur plateau 1D avec drapeau, développé en Python avec interface graphique et mode console.',
                     'technologies': ['Java', 'Minimax Algorithm', 'Alpha-Beta Pruning', 'Game AI', 'Strategy Game', 'GUI', 'Object-oriented Programming'],
@@ -352,7 +403,7 @@ def get_portfolio_data():
                     'category': 'ai',
                 },
                 {
-                    'id': 13,
+                    'id': 14,
                     'title': 'Monde des Wumpus - Résolution par MDP et Itération par Valeurs',
                     'description': 'Implémentation d\'un agent intelligent pour naviguer dans le monde des Wumpus en utilisant un Processus de Décision Markovien (MDP). L\'agent utilise l\'algorithme d\'itération par valeurs pour optimiser sa stratégie de collecte d\'or tout en évitant les monstres et obstacles dans un environnement stochastique.',
                     'technologies': ['Python', 'Markov Decision Process', 'Value Iteration', 'Reinforcement Learning', 'AI Planning', 'Stochastic Environment', 'Game Theory'],
@@ -366,7 +417,7 @@ def get_portfolio_data():
                     'category': 'ai',
                 },
                 {
-                    'id': 14,
+                    'id': 15,
                     'title': 'Prédiction Immobilière - Algorithme KNN (k-nearest neighbors)',
                     'description': 'Système de prédiction des valeurs de propriétés immobilières utilisant l\'algorithme des k plus proches voisins (KNN). Le programme entraîne un modèle sur des données historiques et prédit les prix de nouvelles propriétés avec calcul d\'erreur quadratique moyenne pour évaluer la précision.',
                     'technologies': ['Python', 'Java', 'C++', 'K-Nearest Neighbors', 'Machine Learning', 'Data Analysis', 'CSV Processing', 'Real Estate Prediction'],
