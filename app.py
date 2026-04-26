@@ -97,7 +97,7 @@ def get_portfolio_data():
                 'type': 'Compétition étudiante',
                 'period': 'Janvier 2026 - Avril 2026',
                 'duration': '4 mois',
-                'description': 'Participation au prestigieux concours Ubisoft Game Lab 2026 avec développement d\'un beat-em-up nommé A GLITCH IN TIME en intégrant le thème "année 80-90". Prototype présenté chez Ubisoft Montréal devant un jury de professionnels de l\'industrie du jeu vidéo.',
+                'description': 'Participation au prestigieux concours Ubisoft Game Lab 2026 avec développement d\'un beat-em-up nommé A GLITCH IN TIME, intégrant le thème "années 80-90". Encadrement par des moniteurs Ubisoft connaissant l\'industrie du jeu vidéo, offrant des conseils techniques et créatifs tout au long du projet. Prototype présenté chez Ubisoft Montréal devant un jury de professionnels de l\'industrie du jeu vidéo.',
                 'responsibilities': [
                     'Développement gameplay : système de combat avec combos, dash avec effets visuels, mécaniques de plateforme',
                     'Programmation d\'IA : ennemis avec NavMesh AI et système d\'object pooling pour optimiser les performances',
@@ -120,7 +120,7 @@ def get_portfolio_data():
                     'Implémentation de deux systèmes d\'animation distincts dans un même jeu',
                     'Système d\'accessibilité complet (remapping + haptics)',
                     'Architecture modulaire avec classes abstraites réutilisables',
-                    'Collaboration efficace en équipe de 4 personnes sur 4 mois'
+                    'Collaboration efficace en équipe de 8 personnes sur 4 mois'
                 ]
             },
 
