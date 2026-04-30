@@ -644,13 +644,34 @@ def get_featured_projects():
 
 
 @app.route('/cv')
-def download_cv():
-    """Télécharge le CV en PDF s'il existe"""
-    cv_path = 'static/cv/cv.pdf'
+def view_cv():
+    """Affiche le CV dans le navigateur"""
+    cv_path = os.path.join(app.root_path, 'static', 'cv', 'cv.pdf')
+
     if os.path.exists(cv_path):
-        return send_file(cv_path, as_attachment=True,
-                         download_name='Mialy_Anderson_RAKOTONDRADANO_CV.pdf')
-    return jsonify({'error': 'CV non disponible'}), 404
+        return send_file(
+            cv_path,
+            mimetype='application/pdf',
+            as_attachment=False
+        )
+
+    return "CV non disponible", 404
+
+
+@app.route('/cv/download')
+def download_cv():
+    """Télécharge le CV en PDF"""
+    cv_path = os.path.join(app.root_path, 'static', 'cv', 'cv.pdf')
+
+    if os.path.exists(cv_path):
+        return send_file(
+            cv_path,
+            mimetype='application/pdf',
+            as_attachment=True,
+            download_name='Mialy_Anderson_RAKOTONDRADANO_CV.pdf'
+        )
+
+    return "CV non disponible", 404
 
 
 @app.route('/api/contact', methods=['POST'])

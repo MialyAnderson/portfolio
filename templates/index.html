@@ -1352,9 +1352,13 @@
                     <i class="fas fa-envelope"></i> {{ data.ui.contact_me }}
                 </a>
                 {% if data.about.cv_available %}
-                <a href="/cv" class="btn secondary" download>
-                    <i class="fas fa-file-pdf"></i> {{ data.ui.download_cv }}
-                </a>
+                    <a href="/cv" class="btn secondary" target="_blank" rel="noopener">
+                        <i class="fas fa-file-pdf"></i> Voir le CV
+                    </a>
+
+                    <a href="/cv/download" class="btn secondary">
+                        <i class="fas fa-download"></i> {{ data.ui.download_cv }}
+                    </a>
                 {% endif %}
             </div>
             <div class="hero-stats">
