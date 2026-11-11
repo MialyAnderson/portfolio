@@ -83,8 +83,8 @@ def get_portfolio_data_fr():
             # Hero plus spécifique : on parle de ce que tu fais réellement
             # plutôt qu'un slogan générique.
             'headline': 'Je développe des <em>jeux</em>,<br>des <em>outils logiciels</em><br>et des <em>applications web</em>.',
-            'tagline': 'Gameplay programmer (Unity, Unreal) et développeur full stack (Java/Spring, Flask). Basé à Montréal.',
-            'description': 'Spécialisé en programmation gameplay sur Unity et Unreal Engine, et en développement full stack avec Java/Spring Boot, Angular et Python/Flask. Récemment programmeur gameplay sur CUBI 2026 (concours Ubisoft Game Lab).',
+            'tagline': 'Programmeur gameplay (Unity, Unreal) et développeur full stack (Java/Spring, Flask). Basé à Montréal.',
+            'description': 'Spécialisé en programmation gameplay sur Unity et Unreal Engine, et en développement full stack avec Java/Spring Boot, Angular et Python/Flask. Récemment programmeur gameplay sur A Glitch in Time (concours Ubisoft Game Lab 2026).',
             'email': 'andyrakotondradano@gmail.com',
             'phone': '+1 579 372 6108',
             'location': 'Montréal, QC',
@@ -172,9 +172,9 @@ def get_portfolio_data_fr():
                 'title': 'Développeur Full Stack Java Spring / Angular',
                 'company': 'Shop Imerina',
                 'location': 'Antananarivo, Madagascar',
-                'type': 'Télétravail',
-                'period': 'Septembre 2023 — Présent',
-                'duration': 'En cours',
+                'type': 'Télétravail, temps partiel',
+                'period': 'Septembre 2023 — Septembre 2025',
+                'duration': '2 ans',
                 'description': 'Développement d\'applications de gestion pour le commerce en ligne spécialisé dans les produits malgaches.',
                 'responsibilities': [
                     # Correction : le doublon "facturation" a été retiré.
@@ -235,7 +235,7 @@ def get_portfolio_data_fr():
             'games': [
                 {
                     'id': 1,
-                    'title': 'CUBI 2026 — Beat-em-up Ubisoft Game Lab',
+                    'title': 'A Glitch in Time — Beat-em-up Ubisoft Game Lab 2026',
                     'description': 'Beat-em-up développé pour le concours Ubisoft Game Lab 2026. Deux personnages distincts (style 80s et 90s), système de combat avancé avec combos, dash avec effets visuels, ennemis IA NavMesh, et accessibilité complète. Systèmes hybrides : animation custom frame-swap pour le 80s, Mixamo/Humanoid pour le 90s.',
                     'technologies': ['Unity 6.1', 'C#', 'Input System', 'NavMesh AI', 'Animation Events', 'Object Pooling', 'VFX Graph', 'Cinemachine', 'Mixamo'],
                     'images': [get_media_url('cubi_1.jpg', 'projects')],
@@ -425,7 +425,7 @@ UI_TRANSLATIONS = {
         'hero_meta': 'Programmeur gameplay · Full stack', 'view_projects': 'Voir mes projets',
         'contact_me': 'Me contacter', 'download_cv': 'Télécharger le CV', 'available': 'Disponible',
         'available_projects': 'Disponible pour de nouveaux projets', 'stat_projects': 'Projets réalisés',
-        'stat_engines': 'Moteurs de jeu maîtrisés', 'stat_cubi': 'Mois sur CUBI 2026',
+        'stat_engines': 'Moteurs de jeu maîtrisés', 'stat_cubi': 'Mois sur A Glitch in Time',
         'about_number': '01 / À PROPOS', 'about_title_before': 'Le', 'about_title_em': 'parcours',
         'about_subtitle': "Diplômé en génie logiciel à Montréal, passionné de gameplay programming et d'architecture logicielle.",
         'contact_info': 'Coordonnées', 'experience_number': '02 / EXPÉRIENCE',
@@ -445,7 +445,7 @@ UI_TRANSLATIONS = {
         'direct_contact': 'Contact direct', 'phone': 'Téléphone', 'location': 'Localisation', 'on_web': 'Sur le web',
         'footer': 'Construit avec Flask, du café et beaucoup de Git', 'project_media': 'Médias du projet',
         'loading': 'Chargement...', 'no_media': 'Aucun média disponible.', 'loading_error': 'Erreur de chargement.',
-        'image_alt': 'Image'
+        'image_alt': 'Image', 'view_cv': 'CV (PDF)', 'more_details': 'Activités et réalisations'
     },
     'en': {
         'nav_home': 'Home', 'nav_about': 'About', 'nav_experience': 'Experience',
@@ -453,7 +453,7 @@ UI_TRANSLATIONS = {
         'hero_meta': 'Gameplay programmer · Full stack', 'view_projects': 'View my projects',
         'contact_me': 'Contact me', 'download_cv': 'Download CV', 'available': 'Available',
         'available_projects': 'Available for new projects', 'stat_projects': 'Completed projects',
-        'stat_engines': 'Game engines used', 'stat_cubi': 'Months on CUBI 2026',
+        'stat_engines': 'Game engines used', 'stat_cubi': 'Months on A Glitch in Time',
         'about_number': '01 / ABOUT', 'about_title_before': 'The', 'about_title_em': 'journey',
         'about_subtitle': 'Software engineering student in Montreal, passionate about gameplay programming and software architecture.',
         'contact_info': 'Contact details', 'experience_number': '02 / EXPERIENCE',
@@ -473,7 +473,7 @@ UI_TRANSLATIONS = {
         'direct_contact': 'Direct contact', 'phone': 'Phone', 'location': 'Location', 'on_web': 'On the web',
         'footer': 'Built with Flask, coffee and a lot of Git', 'project_media': 'Project media',
         'loading': 'Loading...', 'no_media': 'No media available.', 'loading_error': 'Loading error.',
-        'image_alt': 'Image'
+        'image_alt': 'Image', 'view_cv': 'Resume (PDF)', 'more_details': 'Activities and achievements'
     }
 }
 
@@ -489,7 +489,7 @@ def add_ui(data, lang):
 
             'Je développe plusieurs types de projets : des jeux vidéo avec Unity et Unreal Engine, des applications web back/front avec Java/Spring, Angular et Flask, ainsi que des outils logiciels et projets techniques en C, Java, Python et OCaml.',
 
-            'Mon plus récent projet : <strong>CUBI 2026</strong>, un beat-em-up développé en équipe de 8 pour le concours Ubisoft Game Lab 2026, présenté chez Ubisoft Montréal devant un jury de l’industrie. J’y ai contribué au système de combat, à l’IA NavMesh, au système d’animation hybride, aux effets visuels gameplay et à l’accessibilité (remapping, haptics).',
+            'Mon plus récent projet : <strong>A Glitch in Time</strong>, un beat-em-up développé en équipe de 8 pour le concours Ubisoft Game Lab 2026, présenté chez Ubisoft Montréal devant un jury de l’industrie. J’y ai contribué au système de combat, à l’IA NavMesh, au système d’animation hybride, aux effets visuels gameplay et à l’accessibilité (remapping, haptics).',
 
             'J’ai également développé des applications de gestion en Java/Spring/Angular pour Shop Imerina entre septembre 2023 et septembre 2025. Cette expérience m’a permis de travailler sur la gestion de stock, les bons de commande, les bons de livraison, la facturation, les tableaux de bord et la maintenance applicative.'
         ]
@@ -499,7 +499,7 @@ def add_ui(data, lang):
 
             'I develop different types of projects: video games with Unity and Unreal Engine, front/back web applications with Java/Spring, Angular and Flask, as well as software tools and technical projects in C, Java, Python and OCaml.',
 
-            'My most recent project is <strong>CUBI 2026</strong>, a beat-em-up developed in a team of 8 for the Ubisoft Game Lab 2026 competition and presented at Ubisoft Montreal in front of an industry jury. I contributed to the combat system, NavMesh AI, hybrid animation system, gameplay visual effects and accessibility features (remapping, haptics).',
+            'My most recent project is <strong>A Glitch in Time</strong>, a beat-em-up developed in a team of 8 for the Ubisoft Game Lab 2026 competition and presented at Ubisoft Montreal in front of an industry jury. I contributed to the combat system, NavMesh AI, hybrid animation system, gameplay visual effects and accessibility features (remapping, haptics).',
 
             'I also developed Java/Spring/Angular management applications for Shop Imerina from September 2023 to September 2025. This experience allowed me to work on inventory management, purchase orders, delivery notes, invoicing, dashboards and application maintenance.'
         ]
@@ -512,7 +512,7 @@ def get_portfolio_data_en():
         'title': 'Full Stack & Gameplay Developer',
         'headline': 'I build <em>games</em>,<br><em>software tools</em><br>and <em>web applications</em>.',
         'tagline': 'Gameplay programmer on Unity and Unreal Engine, and full stack developer with Java/Spring and Flask. Based in Montreal.',
-        'description': 'Specialized in gameplay programming with Unity and Unreal Engine, and full stack development with Java/Spring Boot, Angular and Python/Flask. Recently worked as a gameplay programmer on CUBI 2026 for the Ubisoft Game Lab competition.',
+        'description': 'Specialized in gameplay programming with Unity and Unreal Engine, and full stack development with Java/Spring Boot, Angular and Python/Flask. Recently worked as a gameplay programmer on A Glitch in Time for the Ubisoft Game Lab 2026 competition.',
         'location': 'Montreal, QC'
     })
     data['skill_groups'][0].update({'level': 'Strong proficiency', 'description': 'Technologies used on complete projects, in production or in competition.'})
@@ -532,8 +532,8 @@ def get_portfolio_data_en():
         'achievements': ['Final prototype completed and presented at Ubisoft Montreal', 'Implementation of two distinct animation systems in the same game', 'Complete accessibility system with remapping and haptics', 'Modular architecture with reusable abstract classes', 'Effective collaboration in an 8-person team over 4 months']
     })
     data['experience'][1].update({
-        'title': 'Full Stack Developer Java Spring / Angular', 'location': 'Antananarivo, Madagascar', 'type': 'Remote',
-        'period': 'September 2023 — Present', 'duration': 'Ongoing',
+        'title': 'Full Stack Developer Java Spring / Angular', 'location': 'Antananarivo, Madagascar', 'type': 'Remote, part-time',
+        'period': 'September 2023 — September 2025', 'duration': '2 years',
         'description': 'Development of management applications for an e-commerce business specialized in Malagasy products.',
         'responsibilities': ['Procurement management: stock entries and exits, purchase orders, delivery notes, invoicing and dashboards', 'Inventory management: movement tracking using the FIFO method, real-time inventory and dynamic dashboards', 'Automatic generation of purchase orders and delivery notes'],
         'activities': ['Development, integration testing and performance testing', 'Security best practices and protection of sensitive data', 'Deployment and production release of applications', 'Writing user manuals and application maintenance documentation', 'Debugging and resolution of complex bugs', 'User needs analysis and technical specification definition', 'Corrective and evolutionary maintenance', 'Code review and constructive feedback'],
@@ -546,7 +546,7 @@ def get_portfolio_data_en():
         {'id': 'ai', 'name': 'Artificial Intelligence', 'description': 'AI, Machine Learning and Deep Learning', 'icon': 'fas fa-brain', 'accent': '#8b5cf6'}
     ]
     translations = {
-        1: ('CUBI 2026 — Ubisoft Game Lab Beat-em-up', 'Beat-em-up developed for the Ubisoft Game Lab 2026 competition. Two distinct characters with 80s and 90s styles, advanced combat system with combos, dash with visual effects, NavMesh AI enemies and complete accessibility. Hybrid systems: custom frame-swap animation for the 80s character, Mixamo/Humanoid for the 90s character.'),
+        1: ('A Glitch in Time — Ubisoft Game Lab 2026 Beat-em-up', 'Beat-em-up developed for the Ubisoft Game Lab 2026 competition. Two distinct characters with 80s and 90s styles, advanced combat system with combos, dash with visual effects, NavMesh AI enemies and complete accessibility. Hybrid systems: custom frame-swap animation for the 80s character, Mixamo/Humanoid for the 90s character.'),
         2: ('3D Driving Simulator — Unreal Engine + Chaos Vehicle', 'Driving simulator built with Unreal Engine 5.5 and realistic physics based on ChaosVehicle. Complete vehicle controls, braking, reverse driving, dynamic camera, custom materials and C++ input system without a Blueprint parent.'),
         3: ('JeuAventure — 3D Adventure Game with Unity AI', '3D adventure/platform game with collection mechanics, friend rescue and combat against intelligent enemies. Realistic physics mechanics, advanced visual effects and NavMesh-based AI.'),
         4: ('3D Adventure — Exploration and Collection (Unreal Engine)', '3D adventure game developed entirely with Unreal Engine 5.5 Blueprint system. The player explores an open world, collects coins, uses a flying system to reach elevated areas and solves key-door puzzles.'),
