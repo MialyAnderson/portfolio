@@ -241,7 +241,7 @@ def get_portfolio_data_fr():
                     'images': [get_media_url('cubi_1.jpg', 'projects')],
                     'videos': [get_media_url('cubi_demo.mp4', 'videos')],
                     'main_image': get_media_url('cubi_1.jpg', 'projects'),
-                    'github': 'https://github.com/MialyAnderson/CUBI-GameLab2026.git',
+                    'github': 'https://github.com/MialyAnderson/A-Glitch-in-Time',
                     'demo': None,
                     'category': 'games',
                     'featured': True
@@ -361,7 +361,7 @@ def get_portfolio_data_fr():
                     'technologies': ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Express.js', 'API Integration', 'Bootstrap'],
                     'images': [],
                     'main_image': None,
-                    'github': 'https://github.com/MialyAnderson/ContraventionsMontreal.git',
+                    'github': 'https://github.com/MialyAnderson/Contravention_montreal_clean',
                     'demo': 'https://contravention-montreal-wlpz.onrender.com/',
                     'category': 'web'
                 },
@@ -372,7 +372,7 @@ def get_portfolio_data_fr():
                     'technologies': ['HTML', 'CSS', 'JavaScript', 'Python', 'Flask', 'SQLite', 'Bootstrap'],
                     'images': [],
                     'main_image': None,
-                    'github': 'https://github.com/MialyAnderson/FillGood-Crochet.git',
+                    'github': 'https://github.com/MialyAnderson/fillgood-DecobyAT',
                     'demo': 'http://fillgood-decobyat-4n9e.onrender.com/',
                     'category': 'web'
                 }
